@@ -1,0 +1,167 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" version="24.7.6">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="2607" dy="1342" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="2cgeiaJlc9E0ZoODrjmP-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="Ask if the player want to play a game of blackjack&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="325" y="40" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-0" value="Yes" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="2cgeiaJlc9E0ZoODrjmP-8">
+          <mxGeometry x="0.2353" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="410" y="240" as="sourcePoint" />
+            <mxPoint x="260" y="160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="260" y="70" />
+              <mxPoint x="260" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-5" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="490" y="160" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-6" value="End the program" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="512.5" y="170" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-7" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="520" y="100" width="20" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-8" target="2cgeiaJlc9E0ZoODrjmP-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-8" value="Show the logo" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="215" y="165" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-10" target="2cgeiaJlc9E0ZoODrjmP-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-10" value="Give two aleatory numbers for the player as his cards and show to the player" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="195" y="250" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-12" target="2cgeiaJlc9E0ZoODrjmP-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-12" value="Make the sum of these two numbers and show to the player" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="200" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-29" target="2cgeiaJlc9E0ZoODrjmP-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-14" value="Show one aleatory number for the player, which is the number for the dealer" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="200" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-16" target="2cgeiaJlc9E0ZoODrjmP-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-16" target="2cgeiaJlc9E0ZoODrjmP-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-16" value="Ask if the player want another card" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="200" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-18" target="2cgeiaJlc9E0ZoODrjmP-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-18" value="Give another aleatory number for the player as one more card" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="400" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-20" target="2cgeiaJlc9E0ZoODrjmP-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-20" value="Show the final hand of the player and his final score" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="200" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-22" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="340" y="715" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-36" target="2cgeiaJlc9E0ZoODrjmP-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-23" target="2cgeiaJlc9E0ZoODrjmP-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-23" value="Make the sum of all number the player has" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="570" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-26" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="260" y="890" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-27" target="2cgeiaJlc9E0ZoODrjmP-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-27" value="Give other aleatory numbers for the dealer until he has 5 cards or the sum of the numbers be equal or above 17" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="200" y="1050" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-14" target="2cgeiaJlc9E0ZoODrjmP-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="520" as="sourcePoint" />
+            <mxPoint x="260" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-29" value="Store other aleatory number which is the second number of the dealer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="200" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-31" target="2cgeiaJlc9E0ZoODrjmP-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-31" target="2cgeiaJlc9E0ZoODrjmP-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="1265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-31" value="The hand of the player is above of the dealer and&amp;nbsp;is equal/below to 21?" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="200" y="1235" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="195" y="1410" as="sourcePoint" />
+            <mxPoint x="320" y="60" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="78" y="1410" />
+              <mxPoint x="78" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-33" value="Print &quot;You win&quot;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="200" y="1375" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-35" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="270" y="1320" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-36" target="2cgeiaJlc9E0ZoODrjmP-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="710" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-36" value="The sum of all numbers is equal/below to 21?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="650" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-39" value="Yes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="600" y="810" width="30" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-42" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="680" y="900" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-45" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="350" y="1250" width="20" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2cgeiaJlc9E0ZoODrjmP-46" target="WIyWlLk6GJQsqaUBKTNV-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2cgeiaJlc9E0ZoODrjmP-46" value="Print &quot;You lose&quot;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="650" y="1235" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
