@@ -1,5 +1,6 @@
 from art import logo
 import random
+import os
 
 def display_first(cards_player, score_player, cards_dealer):
     """This function show the initial display of the game"""
@@ -110,6 +111,7 @@ while start:
                 cards_dealer[index_2] = 1
             score_dealer = sum(cards_dealer)
     start = input("Do you want to play another game of Blackjack? (y/n) ") == 'y'
+    os.system('cls')
  
 
 
