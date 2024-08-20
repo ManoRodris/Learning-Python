@@ -1,0 +1,54 @@
+[33mcommit 14092f6a7853305411172e19282abaa779e09ec8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Rodrigo Dórea <rodrigodoreafelix@gmail.com>
+Date:   Sun Aug 18 18:39:33 2024 -0300
+
+    new commit
+
+[33mcommit 9408efc138deb372377d27d32f3cf5207ae52e12[m
+Author: Rodrigo Dórea <rodrigodoreafelix@gmail.com>
+Date:   Sat Aug 17 17:28:39 2024 -0300
+
+    novos exercicios
+
+[33mcommit 6983021202de56897bd2e94398a0ec450017f0b4[m
+Author: Rodrigo Dórea <rodrigodoreafelix@gmail.com>
+Date:   Fri Aug 16 13:04:32 2024 -0300
+
+    consertando
+
+[33mcommit 8abce1b5df8fdacf22963fd2e199a647feff8e88[m
+Author: Rodrigo Dórea <rodrigodoreafelix@gmail.com>
+Date:   Fri Aug 16 12:57:48 2024 -0300
+
+    Atualizando aulas e testando mais algumas coisas em git
+
+[33mcommit fb422f0e50b6ddf93460c979905ed559a8b4eb85[m[33m ([m[1;31morigin/master[m[33m)[m
+Merge: 515abd2 a737ca4
+Author: Rodrigo Dórea <rodrigodoreafelix@gmail.com>
+Date:   Fri Aug 9 15:27:26 2024 -0300
+
+    Merge branch 'main' of github.com:ManoRodris/Learning-Python
+
+[33mcommit 515abd2cb62f20690f4233864d48b4cc505637ae[m
+Author: Rodrigo Dórea <rodrigodoreafelix@gmail.com>
+Date:   Fri Aug 9 14:52:20 2024 -0300
+
+    Finalização do projeto do jogo de Blackjack
+
+[33mcommit 063d677b339729d9a147920f363c8366fd17a603[m
+Author: Rodrigo Dórea <rodrigodoreafelix@gmail.com>
+Date:   Tue Aug 6 23:18:16 2024 -0300
+
+    Adicionando início do projeto de replicar o blackjack
+
+[33mcommit 05d58dd493a4683af6e40f6497d127632a0bc4d2[m
+Author: Rodrigo Dórea <rodrigodoreafelix@gmail.com>
+Date:   Thu Aug 1 23:54:53 2024 -0300
+
+    atualizando dias 9 e 10
+
+[33mcommit f34e9d78cea5650ab227e480355577a853aa90bf[m
+Author: Rodrigo Dórea <rodrigodoreafelix@gmail.com>
+Date:   Tue Jul 30 08:27:43 2024 -0300
+
+    Adicionando o dia 8
