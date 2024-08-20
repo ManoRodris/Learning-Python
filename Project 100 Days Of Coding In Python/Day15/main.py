@@ -1,3 +1,5 @@
+from art import logo
+
 MENU = {
     "espresso": {
         "ingredients": {
@@ -30,15 +32,20 @@ resources = {
     "coffee": 100,
 }
 
+AMOUNT_OF_WATER = resources["water"]
+AMOUNT_OF_MILK = resources["milk"]
+AMOUNT_OF_COFFEE = resources["coffee"]
+AMOUNT_OF_MONEY = 0
+
 def process_coins():
-    """This function checks the amount of money the customer has in coins and calculate the total amount of money"""
+    """This function ask which coins the costumer has and calculate the total amount of money"""
     print("Please insert coins")
     quarters = int(input("How many quarters? "))
     dimes = int(input("How many dimes? "))
     nickles = int(input("How many nickles? "))
     pennies = int(input("How many pennies? "))
-    amount_of_money = quarters * 0.25 + dimes * 0.10 + nickles * 0.05 + pennies * 0.01
-    return amount_of_money
+    total_coins = quarters * 0.25 + dimes * 0.10 + nickles * 0.05 + pennies * 0.01
+    return total_coins
 
 def sufficient_resources():
     """This function verify if has the necessary amount of resources to do the coffee which the costumer want"""
@@ -50,20 +57,20 @@ def sufficient_resources():
     except KeyError:
         pass
     
-    if water <= amount_of_water:
+    if water <= AMOUNT_OF_WATER:
         lack_of_water = False
     else:
         lack_of_water = True
 
     try:
-        if milk <= amount_of_milk:
+        if milk <= AMOUNT_OF_MILK:
             lack_of_milk = False
         else:
             lack_of_milk = True
     except NameError:
         pass
 
-    if coffee <= amount_of_coffee:
+    if coffee <= AMOUNT_OF_COFFEE:
         lack_of_coffee = False
     else:
         lack_of_coffee = True
@@ -90,6 +97,7 @@ def sufficient_resources():
             return True
 
 def sufficient_money(money_from_customer, price_of_coffee, payback):
+    """This function check if the customer has the right amount of money to buy the coffee he chose"""
     if money_from_customer > price_of_coffee:
         print(f"Here is ${payback} in change")
         print(f"Here is your {order}, enjoy!")
@@ -101,45 +109,47 @@ def sufficient_money(money_from_customer, price_of_coffee, payback):
         print(f"Here is your {order}, enjoy!")
         return True
     
-def decrease_resources(amount_of_water, amount_of_milk, amount_of_coffee):
+def decrease_resources():
+    global AMOUNT_OF_WATER
+    global AMOUNT_OF_COFFEE
+    global AMOUNT_OF_MILK
+
     if order == "espresso":
-        amount_of_water -= MENU[order]["ingredients"]["water"]
-        amount_of_coffee -= MENU[order]["ingredients"]["coffee"]
+        AMOUNT_OF_WATER -= MENU[order]["ingredients"]["water"]
+        AMOUNT_OF_COFFEE -= MENU[order]["ingredients"]["coffee"]
     else:
-        amount_of_water -= MENU[order]["ingredients"]["water"]
-        amount_of_milk -= MENU[order]["ingredients"]["milk"]
-        amount_of_coffee -= MENU[order]["ingredients"]["coffee"]
+        AMOUNT_OF_WATER -= MENU[order]["ingredients"]["water"]
+        AMOUNT_OF_MILK -= MENU[order]["ingredients"]["milk"]
+        AMOUNT_OF_COFFEE -= MENU[order]["ingredients"]["coffee"]
         
 
-def order_checker(amount_of_water, amount_of_milk, amount_of_coffee, amount_of_money):
+def order_checker():
     """This function checks if the user want a coffee or want the report or choose a type of coffee which the machine don't offer"""
-    
+    global AMOUNT_OF_MONEY
+
     if order == "latte" or order == "espresso" or order == "cappuccino":
         if sufficient_resources():
             money_from_customer = process_coins()
             price_of_coffee = MENU[order]["cost"]
             payback = round(money_from_customer - price_of_coffee, 2)
             if sufficient_money(money_from_customer, price_of_coffee, payback):
-                decrease_resources(amount_of_water, amount_of_milk, amount_of_coffee)
+                decrease_resources()
                 profit = money_from_customer - payback
-                amount_of_money += profit
-                return amount_of_money
+                AMOUNT_OF_MONEY += round(profit, 2) 
     elif order == "report":
-        print(f"Water: {amount_of_water}ml")
-        print(f"Milk: {amount_of_milk}ml")
-        print(f"Coffee: {amount_of_coffee}g")
-        print(f"Money: ${amount_of_money}")
+        print(f"Water: {AMOUNT_OF_WATER}ml")
+        print(f"Milk: {AMOUNT_OF_MILK}ml")
+        print(f"Coffee: {AMOUNT_OF_COFFEE}g")
+        print(f"Money: ${AMOUNT_OF_MONEY}")
     else:
         print("We don't have this type of coffee in our machine, please check your answer in accord with our options")
 
+print(logo)
 order = input("What would you like? (espresso/latte/cappuccino):").lower().strip()
 
-amount_of_water = resources["water"]
-amount_of_milk = resources["milk"]
-amount_of_coffee = resources["coffee"]
-amount_of_money = 0
-
 while order != "stop":
-    amount_of_money = round(order_checker(amount_of_water, amount_of_milk, amount_of_coffee, amount_of_money), 2)
+    order_checker()
+    print(logo)
     order = input("What would you like? (espresso/latte/cappuccino):").lower().strip()
+
 
