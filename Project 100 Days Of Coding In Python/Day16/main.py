@@ -1,22 +1,30 @@
-#Testing some libraries
+from menu import Menu, MenuItem
+from coffee_maker import CoffeeMaker
+from money_machine import MoneyMachine
 
-"""from turtle import Turtle, Screen
+stop_machine = False
+type_of_coffee = Menu()
+coffee_machine = CoffeeMaker()
+money_machine = MoneyMachine()
 
-timmy = Turtle()
+while not stop_machine:
+    display_coffees = type_of_coffee.get_items()
 
-timmy.shape("turtle")
-timmy.color("cyan2")
-timmy.left(120)
-timmy.forward(100)
+    order = input(f"What would you like? {display_coffees}: ")
 
-screen = Screen()
-screen.exitonclick()"""
+    chosen_coffee = type_of_coffee.find_drink(order)
 
-import prettytable
+    if chosen_coffee is not None:
+        sufficient_resources = coffee_machine.is_resource_sufficient(chosen_coffee)
+        if sufficient_resources:
+            price = chosen_coffee.cost
+            if money_machine.make_payment(price):
+                coffee_machine.make_coffee(chosen_coffee)
+    elif order == "report":
+        coffee_machine.report()
+        money_machine.report()
+    else:
+        stop_machine = True
 
-pokemon_table = prettytable.PrettyTable()
 
-pokemon_table.add_column("Pokemon", ["Charmander", "Bublasaur", "Squirtle"])
-pokemon_table.add_column("Type", ["Fire", "Grass", "Water"])
-pokemon_table.align = "l"
-print(pokemon_table)
+
