@@ -30,6 +30,16 @@ class Snake:
             self.snake[index].goto(new_x, new_y)
         self.snake[0].forward(MOVE_DISTANCE)
 
+    def increase_snake(self):
+        part_of_snake = Turtle(shape="square")
+        part_of_snake.color("yellow")
+        part_of_snake.penup()
+        last_part = len(self.snake) - 1
+        x_position = self.snake[last_part].xcor() + 20
+        y_position = self.snake[last_part].ycor() + 20
+        part_of_snake.goto(x=x_position, y=y_position)
+        self.snake.append(part_of_snake)
+
     def up(self):
         if self.head.heading() != DOWN:
             self.head.seth(UP)
