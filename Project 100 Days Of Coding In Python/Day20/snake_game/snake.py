@@ -14,15 +14,6 @@ class Snake:
         self.create_snake()
         self.head = self.snake[0]
 
-    def create_snake(self):
-        for x in range(3):
-            part_of_snake = Turtle(shape="square")
-            part_of_snake.color("yellow")
-            part_of_snake.penup()
-            part_of_snake.goto(x=self.x_positions, y=0)
-            self.x_positions += 20
-            self.snake.append(part_of_snake)
-
     def move(self):
         for index in range(len(self.snake) - 1, 0, -1):
             new_x = self.snake[index - 1].xcor()
@@ -30,15 +21,28 @@ class Snake:
             self.snake[index].goto(new_x, new_y)
         self.snake[0].forward(MOVE_DISTANCE)
 
-    def increase_snake(self):
+    def create_each_part(self, position):
         part_of_snake = Turtle(shape="square")
         part_of_snake.color("yellow")
         part_of_snake.penup()
-        last_part = len(self.snake) - 1
-        x_position = self.snake[last_part].xcor() + 20
-        y_position = self.snake[last_part].ycor() + 20
-        part_of_snake.goto(x=x_position, y=y_position)
+        part_of_snake.goto(position)
         self.snake.append(part_of_snake)
+
+    def create_snake(self):
+        for x in range(3):
+            position = (self.x_positions, 0)
+            self.create_each_part(position)
+            self.x_positions -= 20
+
+    def increase_snake(self):
+        position = self.snake[-1].pos()
+        self.create_each_part(position)
+
+    def collision(self):
+        for part in self.snake[1:]:
+            if self.head.distance(part) < 15:
+                return True
+        return False
 
     def up(self):
         if self.head.heading() != DOWN:
