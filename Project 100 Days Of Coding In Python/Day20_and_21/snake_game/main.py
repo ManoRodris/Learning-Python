@@ -53,6 +53,7 @@ while game_on:
         scoreboard.increase_score()
         play_eat_sound()
 
+    #Detect when the snake collides with herself or with the wall
     if snake_off_canvas or snake.collision():
         game_on = False
         scoreboard.game_over()
