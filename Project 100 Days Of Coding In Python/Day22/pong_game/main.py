@@ -2,6 +2,7 @@ import turtle
 import time
 from paddle import Paddle
 from ball import Ball
+from scoreboard import Scoreboard
 
 screen = turtle.Screen()
 screen.setup(800,600)
@@ -15,10 +16,13 @@ player_two = Paddle((-350, 0))
 
 game_on = True
 
+decrease_speed = 0.01
+
 ball = Ball()
+scoreboard = Scoreboard()
 
 while game_on:
-    time.sleep(0.1)
+    time.sleep(ball.move_speed)
     screen.listen()
 
     screen.onkey(player_one.up, "Up")
@@ -31,10 +35,21 @@ while game_on:
 
     ball.move()
 
-    if player_one.distance(ball) <= 15 or player_two.distance(ball) <= 15:
-        ball.bounce()
+    if player_one.distance(ball) < 50 and ball.xcor() > 320:
+        ball.bounce_off_paddle()
+
+    if player_two.distance(ball) < 50 and ball.xcor() < -320:
+        ball.bounce_off_paddle()
 
     if ball.ycor() >= 280 or ball.ycor() <= -280:
-        ball.bounce()
+        ball.bounce_off_wall()
+
+    if ball.xcor() > 390:
+        scoreboard.increase_score(False)
+        ball.refresh()
+
+    if ball.xcor() < -390:
+        scoreboard.increase_score(True)
+        ball.refresh()
 
 screen.exitonclick()
