@@ -10,12 +10,14 @@ class CarManager(Turtle):
     def __init__(self):
         super().__init__()
         self.shape("square")
-        self.shapesize(1,3)
+        self.shapesize(1,2)
         self.penup()
         self.seth(0)
         self.color(random.choice(COLORS))
         self.goto(280, random.randint(-270, 270))
+        self.move_cars()
 
     def move_cars(self):
-        self.forward(STARTING_MOVE_DISTANCE)
+        new_x = self.xcor() - MOVE_INCREMENT
+        self.goto(new_x, self.ycor())
 

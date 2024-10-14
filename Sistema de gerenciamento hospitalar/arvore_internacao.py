@@ -1,58 +1,55 @@
-class No:
-    def __init__(self, valor):
-        self.valor = valor
+class NoPaciente:
+    def __init__(self, paciente):
+        """Cria um nó da árvore binária de busca, armazenando um paciente"""
+        self.paciente = paciente
         self.esquerda = None
         self.direita = None
 
-class ArvoreBinariaBusca:
+class ArvoreInternacao:
     def __init__(self):
+        """Inicia a árvore"""
         self.raiz = None
 
-    def inserir(self, valor):
-        """Insere um novo valor na árvore binária de busca."""
-        novo_no = No(valor)
+    def inserir(self, paciente):
+        """Insere um novo paciente na árvore binária de busca."""
         if self.raiz is None:
-            self.raiz = novo_no
+            self.raiz = NoPaciente(paciente)
         else:
-            self._inserir_recursivo(self.raiz, novo_no)
+            self._inserir_recursivo(self.raiz, paciente)
 
-    def _inserir_recursivo(self, no_atual, novo_no):
+    def _inserir_recursivo(self, no_atual, paciente):
         """Função auxiliar recursiva para encontrar a posição de inserção."""
-        if novo_no.valor < no_atual.valor:
+        if paciente.id < no_atual.paciente.id:
             if no_atual.esquerda is None:
-                no_atual.esquerda = novo_no
+                no_atual.esquerda = NoPaciente(paciente)
             else:
-                self._inserir_recursivo(no_atual.esquerda, novo_no)
-        else:
+                self._inserir_recursivo(no_atual.esquerda, paciente)
+        elif paciente.id > no_atual.paciente.id:
             if no_atual.direita is None:
-                no_atual.direita = novo_no
+                no_atual.direita = NoPaciente(paciente)
             else:
-                self._inserir_recursivo(no_atual.direita, novo_no)
+                self._inserir_recursivo(no_atual.direita, paciente)
 
-    def buscar(self, valor):
-        """Busca um valor na árvore binária de busca."""
-        return self._buscar_recursivo(self.raiz, valor)
+    def buscar(self, id_paciente):
+        """Busca um paciente pelo id na árvore binária de busca."""
+        return self._buscar_recursivo(self.raiz, id_paciente)
 
-    def _buscar_recursivo(self, no_atual, valor):
+    def _buscar_recursivo(self, no_atual, id_paciente):
         """Função auxiliar recursiva para busca."""
-        if no_atual is None:
-            return False  # O valor não foi encontrado.
-        if valor == no_atual.valor:
-            return True  # Valor encontrado.
-        elif valor < no_atual.valor:
-            return self._buscar_recursivo(no_atual.esquerda, valor)
+        if no_atual is None or no_atual.paciente.id == id_paciente:
+            return no_atual
+        if id_paciente < no_atual.paciente.id:
+            return self._buscar_recursivo(no_atual.esquerda, id_paciente)
         else:
-            return self._buscar_recursivo(no_atual.direita, valor)
+            return self._buscar_recursivo(no_atual.direita, id_paciente)
 
-    def travessia_em_ordem(self):
-        """Realiza uma travessia em ordem (in-order) e retorna os nós da árvore."""
-        elementos = []
-        self._travessia_em_ordem_recursiva(self.raiz, elementos)
-        return elementos
-
-    def _travessia_em_ordem_recursiva(self, no_atual, elementos):
-        """Função auxiliar para a travessia em ordem."""
-        if no_atual:
-            self._travessia_em_ordem_recursiva(no_atual.esquerda, elementos)
-            elementos.append(no_atual.valor)
-            self._travessia_em_ordem_recursiva(no_atual.direita, elementos)
+    def __repr__(self):
+        pacientes = []
+        self._in_order(self.raiz, pacientes)
+        return f"Árvore de internação: {pacientes}"
+    
+    def _in_order(self, no_atual, pacientes):
+        if no_atual is not None:
+            self._in_order(no_atual.esquerda, pacientes)
+            pacientes.append(no_atual.paciente)
+            self._in_order(no_atual.direita, pacientes)
