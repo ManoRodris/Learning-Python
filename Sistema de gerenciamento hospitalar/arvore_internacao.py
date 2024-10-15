@@ -44,11 +44,13 @@ class ArvoreInternacao:
             return self._buscar_recursivo(no_atual.direita, id_paciente)
 
     def __repr__(self):
+        """Exibe todos os pacientes internados"""
         pacientes = []
         self._in_order(self.raiz, pacientes)
         return f"Árvore de internação: {pacientes}"
     
     def _in_order(self, no_atual, pacientes):
+        """Ordena os pacientes na árvore"""
         if no_atual is not None:
             self._in_order(no_atual.esquerda, pacientes)
             pacientes.append(no_atual.paciente)

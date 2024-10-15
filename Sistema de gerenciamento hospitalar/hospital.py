@@ -53,4 +53,8 @@ class Hospital:
     def buscar_prontuario(self, key, valor):
         """Ordena os prontuários por um atributo especificado para então realizar a busca binária."""
         prontuarios = self.ordenar_prontuarios(key)
-        return busca_binaria(prontuarios, key, valor)
+        prontuario_buscado = busca_binaria(prontuarios, key, valor)
+        if prontuario_buscado:
+            return prontuario_buscado
+        else:
+            return "Prontuário não encontrado"

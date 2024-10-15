@@ -17,7 +17,7 @@ hospital.adicionar_paciente_fila(paciente4)
 
 print(hospital.fila_atendimento.__repr__())
 
-hospital.fila_atendimento.remover_paciente()
+hospital.atender_paciente()
 
 print(hospital.fila_atendimento.__repr__())
 
@@ -27,7 +27,7 @@ hospital.atender_paciente()
 
 print(hospital.pilha_prontuario.ultimo_prontuario())
 
-# Validando a inserção, busca e remoção de pacientes internados na árvore binária de busca.
+# Validando a inserção, busca e remoção de pacientes internados na árvore.
 
 paciente5 = Paciente("Jorge", 27, 5, "aguardando")
 paciente6 = Paciente("Arthur", 22, 6, "aguardando")
@@ -43,5 +43,27 @@ print(hospital.arvore_internacao.__repr__())
 
 print(hospital.buscar_paciente_internado(7))
 print(hospital.buscar_paciente_internado(9))
+
+# Testando os algoritmos de busca e ordenação nos prontuários.
+
+hospital.atender_paciente()
+hospital.atender_paciente()
+hospital.atender_paciente()
+hospital.atender_paciente()
+
+prontuarios_ordenados_por_nome = hospital.ordenar_prontuarios("nome")
+
+print(prontuarios_ordenados_por_nome)
+
+prontuarios_ordenados_por_id = hospital.ordenar_prontuarios("id")
+
+print(prontuarios_ordenados_por_id)
+
+print(hospital.buscar_prontuario("id", 4))
+print(hospital.buscar_prontuario("nome", "Helder"))
+print(hospital.buscar_prontuario("nome", "Adalberto"))
+
+
+
 
 
