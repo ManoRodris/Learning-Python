@@ -3,12 +3,12 @@ from paciente import Paciente
 
 hospital = Hospital()
 
+# Testando a inserção e remoção de pacientes na fila.
+
 paciente1 = Paciente("Rodrigo", 22, 1, "aguardando")
 paciente2 = Paciente("Helder", 20, 2, "aguardando")
 paciente3 = Paciente("Pedro", 19, 3, "aguardando")
 paciente4 = Paciente("Gabi", 23, 4, "aguardando")
-
-# Testando a inserção e remoção de pacientes na fila.
 
 hospital.adicionar_paciente_fila(paciente1)
 hospital.adicionar_paciente_fila(paciente2)
@@ -34,6 +34,8 @@ paciente6 = Paciente("Arthur", 22, 6, "aguardando")
 paciente7 = Paciente("Alberto", 26, 7, "aguardando")
 paciente8 = Paciente("Fabio", 17, 8, "aguardando")
 
+# Inserção
+
 hospital.internar_paciente(paciente5)
 hospital.internar_paciente(paciente6)
 hospital.internar_paciente(paciente7)
@@ -41,15 +43,23 @@ hospital.internar_paciente(paciente8)
 
 print(hospital.arvore_internacao.__repr__())
 
-print(hospital.buscar_paciente_internado(7))
-print(hospital.buscar_paciente_internado(9))
+# Busca
+
+print(hospital.buscar_paciente_internado(7)) # Teste com paciente que realmente está na árvore
+print(hospital.buscar_paciente_internado(9)) # Teste com paciente que não está na árvore
+
+# Remoção 
+
+hospital.atender_paciente_internado(6) # Teste com paciente que realmente está na árvore
+hospital.atender_paciente_internado(3) # Teste com paciente que não está na árvore
+
+print(hospital.arvore_internacao.__repr__())
 
 # Testando os algoritmos de busca e ordenação nos prontuários.
 
-hospital.atender_paciente()
-hospital.atender_paciente()
-hospital.atender_paciente()
-hospital.atender_paciente()
+hospital.atender_paciente() # Teste com penúltimo paciente que está na fila
+hospital.atender_paciente() # Teste com último paciente que está na fila
+hospital.atender_paciente() # Teste após não haver mais pacientes na fila
 
 prontuarios_ordenados_por_nome = hospital.ordenar_prontuarios("nome")
 

@@ -1,7 +1,7 @@
 from fila_atendimento import FilaAtendimento
 from pilha_prontuario import PilhaProntuario
 from arvore_internacao import ArvoreInternacao
-from algoritmos import merge_sort, quick_sort, busca_binaria
+from algoritmos import bubble_sort, quick_sort, busca_binaria
 
 class Hospital:
 
@@ -31,6 +31,16 @@ class Hospital:
         paciente.status = "internado"
         self.arvore_internacao.inserir(paciente)
 
+    def atender_paciente_internado(self, id_paciente):
+        """Atende um paciente internado, removendo-o da árvore após o atendimento."""
+        paciente_buscado = self.arvore_internacao.buscar(id_paciente)
+        if paciente_buscado:
+            paciente_buscado.status = "alta"  # Atualiza o status para alta
+            print(f"Paciente internado atendido: {paciente_buscado.paciente}")
+            self.arvore_internacao.remover(id_paciente)
+        else:
+            print(f"Paciente com ID {id_paciente} não encontrado na internação.")
+
     def buscar_paciente_internado(self, id_paciente):
         """Busca um paciente pelo ID na árvore"""
         paciente_buscado = self.arvore_internacao.buscar(id_paciente)
@@ -43,9 +53,9 @@ class Hospital:
         """Ordena os prontuários armazenados na pilha por um atributo especificado."""
         prontuarios = list(self.pilha_prontuario.pilha)  
         
-        if len(prontuarios) <= 1000:
-            # Se o número de prontuários for pequeno, usa Merge Sort
-            return merge_sort(prontuarios, key)
+        if len(prontuarios) <= 50:
+            # Se o número de prontuários for pequeno, usa Bubble Sort
+            return bubble_sort(prontuarios, key)
         else:
             # Para grandes volumes, usa Quick Sort
             return quick_sort(prontuarios, key)

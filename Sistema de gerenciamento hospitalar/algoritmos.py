@@ -1,46 +1,11 @@
-def merge_sort(prontuarios, key):
-    """Ordena usando Merge Sort, usa o parâmetro 'key' para ordenar"""
-    
-    # Caso base: Se a lista tiver 0 ou 1 elementos, já está ordenada
-    if len(prontuarios) <= 1:
-        return prontuarios
-    
-    # Divide a lista ao meio
-    meio = len(prontuarios) // 2
-    esquerda = merge_sort(prontuarios[:meio], key)
-    direita = merge_sort(prontuarios[meio:], key)
-    
-    # Mescla as duas metades ordenadas
-    return merge(esquerda, direita, key)
-
-def merge(esquerda, direita, key):
-    """Mescla duas listas ordenadas em uma única lista ordenada."""
-    
-    resultado = []
-    i = 0  # Índice da lista da esquerda
-    j = 0  # Índice da lista da direita
-    
-    # Mescla as duas listas enquanto houver elementos em ambas
-    while i < len(esquerda) and j < len(direita):
-        if getattr(esquerda[i], key) <= getattr(direita[j], key):
-            resultado.append(esquerda[i])
-            i += 1
-        else:
-            resultado.append(direita[j])
-            j += 1
-    
-    # Adiciona os elementos restantes da lista esquerda (se houver)
-    while i < len(esquerda):
-        resultado.append(esquerda[i])
-        i += 1
-    
-    # Adiciona os elementos restantes da lista direita (se houver)
-    while j < len(direita):
-        resultado.append(direita[j])
-        j += 1
-    
-    return resultado
-
+def bubble_sort(prontuarios, key):
+    """Ordena usando Bubble Sort, usa o parâmetro 'key' para ordenar"""
+    n = len(prontuarios)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if getattr(prontuarios[j], key) > getattr(prontuarios[j + 1], key):
+                prontuarios[j], prontuarios[j + 1] = prontuarios[j + 1], prontuarios[j]
+    return prontuarios
 
 def quick_sort(prontuarios, key):
     """Ordena usando Quick Sort, usa o parâmetro 'key' para ordenar"""

@@ -42,6 +42,41 @@ class ArvoreInternacao:
             return self._buscar_recursivo(no_atual.esquerda, id_paciente)
         else:
             return self._buscar_recursivo(no_atual.direita, id_paciente)
+        
+    def remover(self, id_paciente):
+        """Remove um paciente internado com base no ID."""
+        self.raiz = self._remover_recursivo(self.raiz, id_paciente)
+    
+    def _remover_recursivo(self, no_atual, id_paciente):
+        """Função auxiliar recursiva para remover pacientes internados"""
+        if no_atual is None:
+            return no_atual
+        if id_paciente < no_atual.paciente.id:
+            no_atual.esquerda = self._remover_recursivo(no_atual.esquerda, id_paciente)
+        elif id_paciente > no_atual.paciente.id:
+            no_atual.direita = self._remover_recursivo(no_atual.direita, id_paciente)
+        else:
+            # Caso 1: Nó a ser removido não tem filhos (é uma folha)
+            if no_atual.esquerda is None and no_atual.direita is None:
+                return None
+            # Caso 2: Nó a ser removido tem apenas um filho
+            elif no_atual.esquerda is None:
+                return no_atual.direita
+            elif no_atual.direita is None:
+                return no_atual.esquerda
+            # Caso 3: Nó a ser removido tem dois filhos
+            else:
+                sucessor = self._buscar_menor(no_atual.direita)
+                no_atual.paciente = sucessor.paciente
+                no_atual.direita = self._remover_recursivo(no_atual.direita, sucessor.paciente.id)
+        return no_atual
+
+    def _buscar_menor(self, no):
+        """Encontra o menor valor da subárvore à direita."""
+        atual = no
+        while atual.esquerda is not None:
+            atual = atual.esquerda
+        return atual
 
     def __repr__(self):
         """Exibe todos os pacientes internados"""
