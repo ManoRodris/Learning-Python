@@ -2,22 +2,32 @@ from turtle import Turtle
 import random
 
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
-STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
 
 
-class CarManager(Turtle):
+class CarManager:
     def __init__(self):
         super().__init__()
-        self.shape("square")
-        self.shapesize(1,2)
-        self.penup()
-        self.seth(0)
-        self.color(random.choice(COLORS))
-        self.goto(280, random.randint(-270, 270))
-        self.move_cars()
+        self.all_cars = []
+        self.starting_move_distance = 5
+
+    def create_cars(self):
+        new_car = Turtle("square")
+        new_car.shapesize(1, 2)
+        new_car.penup()
+        new_car.seth(0)
+        new_car.color(random.choice(COLORS))
+        new_car.goto(280, random.randint(-250, 250))
+        self.all_cars.append(new_car)
 
     def move_cars(self):
-        new_x = self.xcor() - MOVE_INCREMENT
-        self.goto(new_x, self.ycor())
+        for each_car in self.all_cars:
+            each_car.backward(self.starting_move_distance)
 
+    def increase_speed(self):
+        self.starting_move_distance += MOVE_INCREMENT
+
+    def detect_collision(self, turtle_pos):
+        for each_car in self.all_cars:
+            if each_car.distance(turtle_pos) <= 20:
+                return True
