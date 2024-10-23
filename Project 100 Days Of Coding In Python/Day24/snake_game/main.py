@@ -17,8 +17,8 @@ def play_eat_sound():
     eat_sound.play()
 
 def play_collision_sound():
-    pygame.mixer.music.load("game_over.wav")
-    pygame.mixer.music.play()
+    collision_sound = pygame.mixer.Sound("game_over.wav")
+    collision_sound.play()
 
 screen = Screen()
 screen.setup(width=600,height=600)
