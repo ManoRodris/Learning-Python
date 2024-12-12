@@ -20,13 +20,14 @@ total_ii = len(inscriptions_embarcatech[inscriptions_embarcatech["Pólo"] == "Il
 total_j = len(inscriptions_embarcatech[inscriptions_embarcatech["Pólo"] == "Juazeiro"])
 total_vc = len(inscriptions_embarcatech[inscriptions_embarcatech["Pólo"] == "Vitória da Conquista"])
 
-print("===========================================================")
-print(f"Total of submissions in the Embarcatech: {total_subscribers}")
-print(f"Total of submissions in Feira de Santana: {total_fsa}")
-print(f"Total of submissions in Bom Jesus da Lapa: {total_bjl}")
-print(f"Total of submissions in Ilhéus/Itabuna: {total_ii}")
-print(f"Total of submissions in Juazeiro: {total_j}")
-print(f"Total of submissions in Vitória da Conquista: {total_vc}")
+if __name__ == "__main__":
+    print("===========================================================")
+    print(f"Total of submissions in the Embarcatech: {total_subscribers}")
+    print(f"Total of submissions in Feira de Santana: {total_fsa}")
+    print(f"Total of submissions in Bom Jesus da Lapa: {total_bjl}")
+    print(f"Total of submissions in Ilhéus/Itabuna: {total_ii}")
+    print(f"Total of submissions in Juazeiro: {total_j}")
+    print(f"Total of submissions in Vitória da Conquista: {total_vc}")
 
 classified_embarcatech = pandas.read_csv("classified_embarcatech.csv")
 
@@ -56,13 +57,14 @@ total_vc_classified = len(classified_embarcatech[
 ])
 
 
-print("===========================================================")
-print(f"Total of students classified in the Embarcatech: {total_classified}")
-print(f"Total of students classified in Feira de Santana: {total_fsa_classified}")
-print(f"Total of students classified in Bom Jesus da Lapa: {total_bjl_classified}")
-print(f"Total of students classified in Ilhéus/Itabuna: {total_ii_classified}")
-print(f"Total of students classified in Juazeiro: {total_j_classified}")
-print(f"Total of students classified in Vitória da Conquista: {total_vc_classified}")
+if __name__ == "__main__":
+    print("===========================================================")
+    print(f"Total of students classified in the Embarcatech: {total_classified}")
+    print(f"Total of students classified in Feira de Santana: {total_fsa_classified}")
+    print(f"Total of students classified in Bom Jesus da Lapa: {total_bjl_classified}")
+    print(f"Total of students classified in Ilhéus/Itabuna: {total_ii_classified}")
+    print(f"Total of students classified in Juazeiro: {total_j_classified}")
+    print(f"Total of students classified in Vitória da Conquista: {total_vc_classified}")
 
 total_summoned = len(classified_embarcatech[classified_embarcatech["Status"] == "Convocado"])
 total_fsa_summoned = len(classified_embarcatech[
@@ -90,13 +92,14 @@ total_vc_summoned = len(classified_embarcatech[
     (classified_embarcatech["Status"] == "Convocado")
 ])
 
-print("===========================================================")
-print(f"Total of students summoned in the Embarcatech: {total_summoned}")
-print(f"Total of students summoned in Feira de Santana: {total_fsa_summoned}")
-print(f"Total of students summoned in Bom Jesus da Lapa: {total_bjl_summoned}")
-print(f"Total of students summoned in Ilhéus/Itabuna: {total_ii_summoned}")
-print(f"Total of students summoned in Juazeiro: {total_j_summoned}")
-print(f"Total of students summoned in Vitória da Conquista: {total_vc_summoned}")
+if __name__ == "__main__":
+    print("===========================================================")
+    print(f"Total of students summoned in the Embarcatech: {total_summoned}")
+    print(f"Total of students summoned in Feira de Santana: {total_fsa_summoned}")
+    print(f"Total of students summoned in Bom Jesus da Lapa: {total_bjl_summoned}")
+    print(f"Total of students summoned in Ilhéus/Itabuna: {total_ii_summoned}")
+    print(f"Total of students summoned in Juazeiro: {total_j_summoned}")
+    print(f"Total of students summoned in Vitória da Conquista: {total_vc_summoned}")
 
 declassified_embarcatech = pandas.read_csv("declassified_embarcatech.csv")
 
@@ -107,11 +110,12 @@ total_ii_declassified = len(declassified_embarcatech[declassified_embarcatech["P
 total_j_declassified = len(declassified_embarcatech[declassified_embarcatech["Polo"] == "Juazeiro"])
 total_vc_declassified = len(declassified_embarcatech[declassified_embarcatech["Polo"] == "Vitória da Conquista"])
 
-print("===========================================================")
-print(f"Total of students declassified in the Embarcatech: {total_declassified}")
-print(f"Total of students declassified in Feira de Santana: {total_fsa_declassified}")
-print(f"Total of students declassified in Bom Jesus da Lapa: {total_bjl_declassified}")
-print(f"Total of students declassified in Ilhéus/Itabuna: {total_ii_declassified}")
-print(f"Total of students declassified in Juazeiro: {total_j_declassified}")
-print(f"Total of students declassified in Vitória da Conquista: {total_vc_declassified}")
+if __name__ == "__main__":
+    print("===========================================================")
+    print(f"Total of students declassified in the Embarcatech: {total_declassified}")
+    print(f"Total of students declassified in Feira de Santana: {total_fsa_declassified}")
+    print(f"Total of students declassified in Bom Jesus da Lapa: {total_bjl_declassified}")
+    print(f"Total of students declassified in Ilhéus/Itabuna: {total_ii_declassified}")
+    print(f"Total of students declassified in Juazeiro: {total_j_declassified}")
+    print(f"Total of students declassified in Vitória da Conquista: {total_vc_declassified}")
 
