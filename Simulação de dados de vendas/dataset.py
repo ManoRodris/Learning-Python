@@ -51,7 +51,7 @@ dados = {
 
 # Criando DataFrame e adicionando a coluna de valor total
 df = pd.DataFrame(dados)
-df["valor_total"] = df["preco_unitario"] * df["quantidade"]
+df["valor_total"] = round(df["preco_unitario"] * df["quantidade"], 2)
 
 # Salvar em CSV para futuras análises
 df.to_csv("dados_vendas.csv", index=False)
