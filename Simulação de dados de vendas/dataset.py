@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-# Definir categorias de produtos e lojas
+# Definir categorias de produtos, os preços dos produtos e as lojas
 produtos = {
     "Notebook": "Eletrônicos",
     "Smartphone": "Eletrônicos",
@@ -32,13 +32,14 @@ preco_produtos = {
 
 lojas = ["Loja Centro", "Loja Norte", "Loja Sul", "Loja Leste"]
 
-# Gerar 500 vendas fictícias
+# Gerando 500 vendas fictícias
 np.random.seed(42)  # Para reprodutibilidade
 num_vendas = 500
 
 # Gerador de produtos aleatorios
 produtos_aleatorios = np.random.choice(list(produtos.keys()), size=num_vendas)
 
+# Estruturando dados que aparecerão no arquivo CSV
 dados = {
     "id_venda": np.arange(1, num_vendas + 1),
     "data": pd.date_range(start="2024-01-01", periods=num_vendas, freq="D"),
@@ -49,9 +50,9 @@ dados = {
     "loja": np.random.choice(lojas, num_vendas),
 }
 
-# Criando DataFrame e adicionando a coluna de valor total
+# Criando DataFrame a partir dos dados e adicionando a coluna de valor total
 df = pd.DataFrame(dados)
 df["valor_total"] = round(df["preco_unitario"] * df["quantidade"], 2)
 
-# Salvar em CSV para futuras análises
+# Salvando em CSV para futuras análises
 df.to_csv("dados_vendas.csv", index=False)
