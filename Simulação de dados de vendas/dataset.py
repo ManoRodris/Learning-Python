@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-# Definir categorias de produtos, os preços dos produtos e as lojas
+# Definindo as variáveis com categorias de produtos, os preços dos produtos e as lojas
 produtos = {
     "Notebook": "Eletrônicos",
     "Smartphone": "Eletrônicos",
