@@ -26,7 +26,7 @@ fig_itens_mais_vendidos = px.bar(produtos_vendas, x='produto', y='quantidade', t
     'produto': 'Produto', 'quantidade': 'Quantidade'})
 col3.plotly_chart(fig_itens_mais_vendidos)
 
-# Ilustrando as categorias que mais venderam a partir de um gráfico de barras
+# Ilustrando as categorias que geraram maior receita a partir de um gráfico de barras
 fig_categorias_mais_vendidas = px.bar(receita_por_categoria, x='categoria', y='valor_total', title='Categorias que geraram maior receita', labels={
     'categoria': 'Categoria', 'valor_total': 'Receita'})
 col4.plotly_chart(fig_categorias_mais_vendidas)
