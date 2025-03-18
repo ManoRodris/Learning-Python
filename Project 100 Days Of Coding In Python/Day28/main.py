@@ -13,9 +13,14 @@ LONG_BREAK_MIN = 20
 # ---------------------------- TIMER RESET ------------------------------- # 
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
+def start_timer():
+   count_down(5)
 
-# ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
-
+# ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
+def count_down(count):
+    canvas.itemconfig(timer_text, text=count)
+    if count > 0:
+      window.after(1000, count_down, count - 1)
 # ---------------------------- UI SETUP ------------------------------- #
 
 # Configuring the window interface
@@ -28,15 +33,16 @@ title_label = Label(text="Timer", font=(FONT_NAME, 35), fg=GREEN, bg=YELLOW)
 title_label.grid(column=1, row=1)
 
 # Configuring the tomato visualization in canva
-tomato_img = PhotoImage(file="tomato.png")
+tomato_img = PhotoImage(file=r"C:\Users\Rodrigo\Documents\Projects\Learning-Python\Project 100 Days Of Coding In Python\Day28\tomato.png")
 canvas = Canvas(window, width=220, height=240, bg=YELLOW, highlightthickness=0)
 canvas.create_image(110, 120, image=tomato_img)
-canvas.create_text(110, 140, text="00:00", font=(FONT_NAME, 25, "bold"), fill="white")
+timer_text = canvas.create_text(110, 140, text="00:00", font=(FONT_NAME, 25, "bold"), fill="white")
 canvas.grid(column=1, row=2)
 
 # Configuring the buttons
-start_button = Button(text="Start", bg=YELLOW, fg=RED)
+start_button = Button(text="Start", bg=YELLOW, fg=RED, command=start_timer)
 start_button.grid(column=0, row=3)
+print(start_button.configure().keys())
 
 reset_button = Button(text="Reset", bg=YELLOW, fg=RED)
 reset_button.grid(column=2, row=3)
