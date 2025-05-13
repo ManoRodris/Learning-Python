@@ -9,7 +9,7 @@ from tkinter import *
 
 window = Tk()
 # window.geometry("240x240")
-window.config(padx=20, pady=20)
+window.config(padx=50, pady=50)
 window.title("Password Manager")
 
 # Configuring the picture
@@ -20,26 +20,28 @@ canvas.grid(column=1, row=0)
 
 # Configuring the labels and entries
 
-website_label = Label(window, text="Website: ")
+website_label = Label(window, text="Website:")
 website_label.grid(column=0, row=1)
 
-website_entry = Entry(window, width=35)
+website_entry = Entry(window, width=50)
 website_entry.grid(column=1, row=1, columnspan=2)
 
-email_label = Label(window, text="Email/Username: ")
+email_label = Label(window, text="Email/Username:")
 email_label.grid(column=0, row=2)
 
-email_entry = Entry(window, width=35)
+email_entry = Entry(window, width=50)
 email_entry.grid(column=1, row=2, columnspan=2)
 
-password_label = Label(window, text="Password: ")
+password_label = Label(window, text="Password:")
 password_label.grid(column=0, row=3)
 
-# Remember to fix the password entry desalingment problem
-password_entry = Entry(window, width=21)
-password_entry.grid(column=1, row=3)
+password_entry = Entry(window, width=30)
+password_entry.grid(column=1, row=3, padx=(0,5))
 
 generate_password = Button(text="Generate Password")
-generate_password.grid(column=2, row=3)
+generate_password.grid(column=2, row=3, padx=(0,5))
+
+add_button = Button(text="Add", width=42)
+add_button.grid(column=1, row=4, columnspan=2)
 
 window.mainloop()
