@@ -1,3 +1,6 @@
+from tkinter import *
+from tkinter import messagebox
+
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
@@ -5,6 +8,9 @@ def save():
     website_text = website_entry.get()
     email_text = email_entry.get()
     password_text = password_entry.get()
+
+    # its_ok = messagebox.askokcancel(title=website_text, message=f"Are you sure these informations are right? \n E-mail: {email_text} \n Password: {password_text}")
+    # if its_ok:
     with open("accounts.txt", "a", encoding="utf-8") as f:
         f.write(f"{website_text} | {email_text} | {password_text} \n")
     website_entry.delete(0, END)
@@ -13,7 +19,6 @@ def save():
 
 
 # ---------------------------- UI SETUP ------------------------------- #
-from tkinter import *
 
 # Instance of the main window
 
@@ -23,7 +28,7 @@ window.config(padx=50, pady=50)
 window.title("Password Manager")
 
 # Configuring the picture
-# img = PhotoImage(file=r"C:\Users\Rodrigo\Documents\Projects\Learning-Python\Project 100 Days Of Coding In Python\Day29\logo.png")
+img = PhotoImage(file=r"C:\Users\Rodrigo\Documents\Projects\Learning-Python\Project 100 Days Of Coding In Python\Day29\logo.png")
 # img = PhotoImage(file="logo.png")
 canvas = Canvas(window, width=200, height=200, highlightthickness=0)
 canvas.create_image(100, 100, image=img)
