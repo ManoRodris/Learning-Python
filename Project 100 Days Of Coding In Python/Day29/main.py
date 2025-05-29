@@ -1,7 +1,46 @@
+import os
+import random
 from tkinter import *
 from tkinter import messagebox
 
+# Defining a fix way inside the project for the accounts informations
+file_root = os.path.join(os.path.dirname(__file__), "data", "accounts.txt")
+os.makedirs(os.path.dirname(file_root), exist_ok=True)
+
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
+#Password Generator Project
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+symbols = ['@', '#', '$', '%', '&', '(', ')', '*', '+']
+
+nr_letters = random.randint(8, 10)
+nr_symbols = random.randint(2, 4)
+nr_numbers = random.randint(2, 4)
+
+password_list = []
+
+password_list += [random.choice(letters) for char in range(nr_letters)]
+password_list += [random.choice(symbols) for char in range(nr_symbols)]
+password_list += [random.choice(numbers) for char in range(nr_numbers)]
+# # letters_in_password = [random.choice(letters) for char in range(nr_letters)]
+# # password_list.append(letters_in_password)
+
+# # for char in range(nr_letters):
+# #   password_list.append(random.choice(letters))
+
+# for char in range(nr_symbols):
+#   password_list += random.choice(symbols)
+
+# for char in range(nr_numbers):
+#   password_list += random.choice(numbers)
+
+random.shuffle(password_list)
+
+password = ""
+for char in password_list:
+  password += char
+
+print(f"Your password is: {password}")
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
@@ -9,13 +48,16 @@ def save():
     email_text = email_entry.get()
     password_text = password_entry.get()
 
-    # its_ok = messagebox.askokcancel(title=website_text, message=f"Are you sure these informations are right? \n E-mail: {email_text} \n Password: {password_text}")
-    # if its_ok:
-    with open("accounts.txt", "a", encoding="utf-8") as f:
-        f.write(f"{website_text} | {email_text} | {password_text} \n")
-    website_entry.delete(0, END)
-    email_entry.delete(0, END)
-    password_entry.delete(0, END)
+    if (not password_text or not password_text.strip()) or (not email_text or not email_text.strip()) or (not website_text or not website_text.strip()):
+        messagebox.showerror(title="E-mail or password invalid", message="Please don't leave any fields empty!")
+    else:
+        its_ok = messagebox.askokcancel(title=website_text, message=f"Are you sure these informations are right? \n E-mail: {email_text} \n Password: {password_text}")
+        if its_ok:
+            with open(file_root, "a", encoding="utf-8") as f:
+                f.write(f"{website_text} | {email_text} | {password_text} \n")
+                website_entry.delete(0, END)
+                email_entry.delete(0, END)
+                password_entry.delete(0, END)
 
 
 # ---------------------------- UI SETUP ------------------------------- #
